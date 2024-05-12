@@ -1,0 +1,308 @@
+
+
+
+:root{
+    --red:#EA0707;
+    --green:#27ae60;
+    --black:#000;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1)}
+/*----------------------------- debut header------------------------------------------------------------------*/
+
+ @import('https://fonts.googleapis.com/css2? famille=Montserrat:wght@400;500&display=swap') ;
+
+*{ 
+
+    font-family: 'Montserrat', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    transition: all .2s linear;
+}
+section{
+    padding:1rem ;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+    
+}
+
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background:rgba(255, 255, 255, 1);
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo img{
+    width: 13em;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--red);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--red); 
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+
+
+/*
+.section-apropos .contenaire_descr
+{  
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    
+    padding: 4rem;
+}
+
+.section-apropos .contenaire_descr .image{
+    flex: 1 1 45rem;;
+
+}
+
+.section-apropos .contenaire_descr .image img{
+    width: 100%;
+    width: 400px;
+    background: var(--red);
+   
+    border-radius: 25px;
+    
+}
+
+.section-apropos .contenaire_descr .content{
+    flex: 8 1 45rem;
+    padding: 2rem;
+}
+
+.section-apropos .contenaire_descr .content h3{
+   color: var(--red);
+   font-size: 4rem;
+   padding: 3rem 0;
+}
+
+.section-apropos .contenaire_descr .content span{
+  
+   font-size: 8rem;
+}
+
+
+
+.section-apropos .contenaire_descr .content p{
+   color: black;
+   font-size: 2rem;
+  
+}
+*/
+
+
+/*----------------------------- fin header------------------------------------------------------------------*/
+
+
+/*----------------------------- debu section apropos------------------------------------------------------------------*/
+
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{ 
+    width: 100%;
+    background: var(--red);
+    padding: 8rem;
+    
+    
+
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    color:black;
+    font-size: 4rem;
+    padding:.5rem 0;
+}
+.about .row .content  h2{
+    font-size: 2rem;
+}
+.about .row .content p{
+    color:black;
+    font-size: 1.6rem;
+    padding:.1rem 0;
+    line-height: 1.8;
+    padding-top: 1em;
+}
+.about .row .content span {
+    color: var(--red);
+    font-size: 5rem    ;
+}
+.about .row .content .icons-container{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    margin-top: .5rem;
+}
+
+.about .row .content .icons-container .icons{
+    background:#eee;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex:1 1 17rem;
+    padding:1.5rem 1rem;
+}
+
+.about .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:var(--red);
+}
+
+.about .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color:black;
+
+
+}
+
+.btn{
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center ;
+    background: var(--red);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:0.8rem   ;
+
+}
+.btn:hover{
+    color: var(--black);
+    background: yellow ;
+    letter-spacing: .3rem;
+
+}
+
+
+
+/*----------------------------- fin section apropos------------------------------------------------------------------*/
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+  
+
+@media (max-width:768px){
+
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+   header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    
+
+
+      header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+
+    @media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
